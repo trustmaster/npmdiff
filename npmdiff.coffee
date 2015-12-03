@@ -2,6 +2,7 @@ fs = require 'fs'
 
 if process.argv.length isnt 4
   console.log "Usage: coffee npmdiff.coffee <source_file> <target_file>"
+  process.exit 1
 
 list1 = fs.readFileSync process.argv[2], encoding: 'utf8'
 list2 = fs.readFileSync process.argv[3], encoding: 'utf8'
